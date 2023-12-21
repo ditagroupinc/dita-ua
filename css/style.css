@@ -132,7 +132,7 @@ span.title span {
 }
 
 .gradient-btn {
-  padding: 20px 40px;
+  padding: 20px 38px;
   border-radius: 12px;
   background: linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%);
   position: relative;
@@ -256,7 +256,7 @@ header .flex a.logo-header {
   align-items: center;
 }
 
-.navbar .all-btn {
+.navbar .gradient-btn, .navbar .contact_info {
   display: none;
 }
 .navbar .social-row {
@@ -385,7 +385,7 @@ header .flex a.logo-header {
 .advantages .advantages-item .advantages-item-hover_block p {
   display: none;
 }
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 992px) {
   .advantages .advantages-item:hover span.name {
     color: #fff;
   }
@@ -401,6 +401,29 @@ header .flex a.logo-header {
     top: 0;
   }
   .advantages .advantages-item:hover .advantages-item-hover_block p {
+    padding-top: 16px;
+    display: block;
+    letter-spacing: 0;
+    text-align: left;
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .advantages.visible .splide__slide.is-active.is-visible span.name {
+    color: #fff;
+  }
+  .advantages.visible .splide__slide.is-active.is-visible a {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+  }
+  .advantages.visible .splide__slide.is-active.is-visible .advantages-item-hover_block {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%);
+    height: 100%;
+    top: 0;
+  }
+  .advantages.visible .splide__slide.is-active.is-visible .advantages-item-hover_block p {
     padding-top: 16px;
     display: block;
     letter-spacing: 0;
@@ -678,6 +701,21 @@ header .flex a.logo-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.blog .blog-wrapper .blog-content .blog-content__info .link-btn {
+  color: #4328B7;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blog .blog-wrapper .blog-content .blog-content__info .link-btn img {
+  filter: invert(16%) sepia(57%) saturate(4947%) hue-rotate(249deg) brightness(86%) contrast(97%);
+}
+.blog .blog-wrapper .blog-content .blog-content__info .link-btn:hover {
+  color: #1b1b1b;
+}
+.blog .blog-wrapper .blog-content .blog-content__info .link-btn:hover img {
+  filter: invert(7%) sepia(7%) saturate(9%) hue-rotate(351deg) brightness(90%) contrast(91%);
 }
 .blog .blog-wrapper .blog-content .blog-content__info-date {
   font-size: 14px;
@@ -1024,7 +1062,8 @@ footer .footer-bottom .policy a:hover {
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  border: 1px solid var(--Violet, #4328B7);
+  background: var(--Gradient, linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%));
+  backdrop-filter: blur(17px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1038,15 +1077,13 @@ footer .footer-bottom .policy a:hover {
 }
 .topcontrol img {
   transition: all 0.3s;
+  filter: invert(1);
 }
 .topcontrol.active {
   opacity: 1;
 }
 .topcontrol.active:hover {
-  background: var(--Violet, #4328B7);
-}
-.topcontrol.active:hover img {
-  filter: invert(1);
+  opacity: 0.7;
 }
 
 .blog-page {

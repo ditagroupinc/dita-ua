@@ -110,7 +110,7 @@ span.title span{
 }
 
 .gradient-btn {
-  padding: 20px 40px;
+  padding: 20px 38px;
   border-radius: 12px;
   background: linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%);
   position: relative;
@@ -237,7 +237,7 @@ header .flex a.logo-header {
   align-items: center;
 }
 .navbar {
-  .all-btn{
+  .gradient-btn, .contact_info{
     display: none;
   }
   .social-row {
@@ -372,7 +372,7 @@ header .flex a.logo-header {
         display: none;
       }
     }
-    @media only screen and (min-width: 991px) {
+    @media only screen and (min-width: 992px) {
     &:hover {
       span.name {
         color: #fff;
@@ -398,7 +398,35 @@ header .flex a.logo-header {
       }
     }
   }
+
   }
+  @media only screen and (max-width: 991px) {
+    &.visible .splide__slide.is-active.is-visible {
+      span.name {
+        color: #fff;
+      }
+      a{
+        opacity: 1;
+        position: relative;
+        z-index: 2;
+
+      }
+      .advantages-item-hover_block {
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        background: linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%);
+        height: 100%;
+        top: 0;
+        p{
+          padding-top: 16px;
+          display: block;
+          letter-spacing: 0;
+          text-align: left;
+          color: #fff;
+        }
+      }
+    }
+  }
+
 }
 
 .clients {
@@ -685,6 +713,20 @@ header .flex a.logo-header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .link-btn {
+          color: #4328B7;
+          display: flex;align-items: center;
+          gap: 10px;
+          img{
+            filter: invert(16%) sepia(57%) saturate(4947%) hue-rotate(249deg) brightness(86%) contrast(97%);
+          }
+          &:hover {
+            color: #1b1b1b;
+            img{
+              filter: invert(7%) sepia(7%) saturate(9%) hue-rotate(351deg) brightness(90%) contrast(91%);
+            }
+          }
+        }
       }
       .blog-content__info-date {
         font-size: 14px;
@@ -1051,7 +1093,8 @@ footer{
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  border: 1px solid var(--Violet, #4328B7);
+  background: var(--Gradient, linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%));
+  backdrop-filter: blur(17px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1064,14 +1107,12 @@ footer{
   cursor: pointer;
   img{
     transition: all 0.3s;
+    filter: invert(1);
   }
   &.active {
     opacity: 1;
     &:hover {
-      background: var(--Violet, #4328B7);
-      img{
-        filter: invert(1);
-      }
+      opacity: 0.7;
     }
   }
 }
