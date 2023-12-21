@@ -367,13 +367,19 @@ $(document).ready(function() {
                     perMove: 1,
                     arrows: false,
                     gap: 20,
-                    pagination: 'splide__pagination portfolio-pagination',
+                    pagination: true,
                     breakpoints: {},
                 }).mount();
+                splide.on('moved', function(e) {
+                    let index = splide.index;
+                    $('.b-nav-tab').removeClass('active');
+                    $('.b-nav-tab').eq(index).addClass('active');
+                });
                 $('.b-nav-tab').on('click', function() {
-                    let index = $(this).index();
+                    var index = $(this).index();
                     splide.go(index);
                 });
+
             }
         });
 
