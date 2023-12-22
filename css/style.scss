@@ -59,9 +59,9 @@ span.title span{
   left: 0;
   right: 0;
   margin: auto;
-  max-width: 1590px;
+  max-width: 1608px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 24px;
   position: relative;
   box-sizing: border-box;
   text-align: center;
@@ -110,7 +110,7 @@ span.title span{
 }
 
 .gradient-btn {
-  padding: 20px 38px;
+  padding: 20px 32px;
   border-radius: 12px;
   background: linear-gradient(123deg, #C57BFF 0%, #4B66D2 98.86%);
   position: relative;
@@ -182,7 +182,9 @@ header {
   padding: 20px 0;
   transition: all 0.3s;
   &.scroll-header {
-    background: #fff;
+    background: url(../img/body-bg.png) repeat left 100%;
+    background-color: #fff;
+    border-bottom: 1px solid var(--Grey, #E2E2E2);
   }
 }
 
@@ -253,6 +255,7 @@ header .flex a.logo-header {
     img {
       object-fit: contain;
       max-width: 769px;
+      display: block;
     }
   }
 
@@ -631,6 +634,10 @@ header .flex a.logo-header {
     margin-bottom: 50px;
   }
 
+//.splide.portfolio-wrap__content {
+//  display: none;
+//}
+
   .portfolio-wrap__content {
     .portfolio-wrap-content__item.b-tab.hidden {
       display: none;
@@ -717,6 +724,7 @@ header .flex a.logo-header {
           color: #4328B7;
           display: flex;align-items: center;
           gap: 10px;
+          font-weight: 500;
           img{
             filter: invert(16%) sepia(57%) saturate(4947%) hue-rotate(249deg) brightness(86%) contrast(97%);
           }
@@ -772,7 +780,27 @@ header .flex a.logo-header {
           font-style: normal;
           font-weight: 600;
           line-height: 28px;
+          position: relative;
+          display: block;
+          &:before{
+            content: "";
+            width: 24px;
+            height: 24px;
+            background: url(../img/arrow-blue.svg) no-repeat center/cover;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            opacity: 0;
+            transition: all 0.3s;
+          }
+          &:hover {
+            &:before{
+              opacity: 1;
+            }
+          }
         }
+
       }
     }
   }
@@ -1099,7 +1127,7 @@ footer{
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 5%;
+  right: 1%;
   bottom: 5%;
   transform: rotate(270deg);
   opacity: 0;
@@ -1108,6 +1136,9 @@ footer{
   img{
     transition: all 0.3s;
     filter: invert(1);
+    display: block;
+    width: 12px;
+    height: 12px;
   }
   &.active {
     opacity: 1;

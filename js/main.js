@@ -38,6 +38,17 @@ $( document ).ready(function() {
             }
             return false;
         });
+        $('a[href^="#"].links-item').on('click', function (e) {
+            let link = $(this).attr('href'),
+                el = $(document).find(link);
+            if (el.length > 0) {
+                el = el.eq(0).offset().top;
+                $('html, body').animate({
+                    scrollTop: el - 100 + 'px'
+                }, 300, 'linear');
+            }
+            return false;
+        });
     }else {
         $('a[href^="#"].menu-hide-link').on('click', function (e) {
             let link = $(this).attr('href'),
@@ -51,6 +62,17 @@ $( document ).ready(function() {
             return false;
         });
         $('a[href^="#"].b-nav-tab').on('click', function (e) {
+            let link = $(this).attr('href'),
+                el = $(document).find(link);
+            if (el.length > 0) {
+                el = el.eq(0).offset().top;
+                $('html, body').animate({
+                    scrollTop: el - 110 + 'px'
+                }, 300, 'linear');
+            }
+            return false;
+        });
+        $('a[href^="#"].links-item').on('click', function (e) {
             let link = $(this).attr('href'),
                 el = $(document).find(link);
             if (el.length > 0) {
@@ -361,14 +383,18 @@ $(document).ready(function() {
 $(document).ready(function() {
     if ($('.portfolio-wrap__content').length > 0) {
         $(document).ready(function () {
-            if ($(window).width() <= 991) {
                 let splide = new Splide('.portfolio-wrap__content', {
                     perPage: 1,
                     perMove: 1,
                     arrows: false,
                     gap: 20,
-                    pagination: true,
-                    breakpoints: {},
+                    pagination: false,
+                    breakpoints: {
+                        991: {
+                            perPage: 1,
+                            pagination: true,
+                        },
+                    },
                 }).mount();
                 splide.on('moved', function(e) {
                     let index = splide.index;
@@ -380,7 +406,6 @@ $(document).ready(function() {
                     splide.go(index);
                 });
 
-            }
         });
 
     }

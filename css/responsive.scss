@@ -117,6 +117,12 @@
 }
 
 @media only screen and (max-width: 991px) {
+    //.portfolio .portfolio-wrap__content{
+    //    display: none;
+    //}
+    //.portfolio .splide.portfolio-wrap__content {
+    //    display: block;
+    //}
 
     .advantages .advantages-item .is-visible.is-active .advantages-item-hover_block p {
         height: 110px;
@@ -157,6 +163,7 @@
         display: flex;
         width: 100%;
         gap: 40px;
+        margin-bottom: 32px;
     }
     .navbar-wrap {
         padding: 28px 30px 30px;
@@ -167,7 +174,6 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
-        margin-bottom: 32px;
         a {
             display: flex;
             align-items: center;
@@ -381,6 +387,12 @@
     .clients .container {
         padding-right: 0;
     }
+
+    .clients .clients-top_row .flex,
+    .clients .clients-bottom_row .flex .clients-bottom-img {
+        padding-right: 24px;
+    }
+
     .promo-block {
         padding-top: 112px;
     }
@@ -435,6 +447,9 @@
     .clients, .about-us, .portfolio, .blog, .partners, .contact {
         padding: 60px 0 40px;
     }
+
+
+
     .clients .clients-top_row .flex, .blog .blog-top__row, .partners .partners__top {
         margin-bottom: 40px;
         flex-wrap: wrap;
@@ -479,6 +494,9 @@
         position: absolute;
         right: 0;
         top: 24px;
+    }
+    .blog .blog-wrapper .blog-wrapper__list li a:before {
+        display: none;
     }
     .blog .blog-wrapper .blog-wrapper__list li:first-child:before {
         top: 0;
@@ -550,6 +568,9 @@
 }
 
 @media only screen and (max-width: 480px){
+    .navbar-wrap .gradient-btn {
+        margin-bottom: 32px;
+    }
     .navbar ul li a {
         font-size: 16px;
         line-height: 20px;
@@ -621,5 +642,19 @@
     }
     .navbar-wrap {
         padding: 28px 30px 90px;
+    }
+    .promo-block {
+        padding-top: 82px;
+    }
+    .promo-block__content {
+        height: calc(100vh - 82px);
+    }
+    .promo-block {
+        background: url(../img/promo-bg-mob.png) no-repeat center/cover;
+    }
+}
+@media only screen and (max-width: 375px) {
+    button.splide__pagination__page {
+        width: 34px;
     }
 }
