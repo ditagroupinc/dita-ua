@@ -432,6 +432,9 @@
     .advantages {
         padding: 60px 0 40px;
     }
+    .advantages-slider__block-top.flex {
+        padding-right: 24px;
+    }
     .block__content-top span.block__content-top-text {
         font-size: 14px;
     }
@@ -570,6 +573,10 @@
 @media only screen and (max-width: 480px){
     .navbar-wrap .gradient-btn {
         margin-bottom: 32px;
+    }
+    .navbar-wrap .gradient-btn {
+        width: 100%;
+        justify-content: center;
     }
     .navbar ul li a {
         font-size: 16px;
