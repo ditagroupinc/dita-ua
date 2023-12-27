@@ -2,7 +2,7 @@
   .container {
     max-width: 100%;
     width: 100%;
-    padding: 0 120px;
+    padding: 0 8.4%;
   }
   .promo-block .promo-block__img img {
     max-width: 590px;
@@ -150,8 +150,20 @@
     max-width: 100%;
     width: 100%;
   }
+  .promo-block {
+    padding-top: 140px;
+  }
+  .all-btn {
+    white-space: nowrap;
+  }
+  .gradient-btn span {
+    white-space: nowrap;
+  }
 }
 @media only screen and (max-width: 1199px) {
+  .container {
+    padding: 0 24px;
+  }
   .navbar ul {
     gap: 40px;
   }
@@ -681,6 +693,9 @@
   }
 }
 @media only screen and (max-width: 680px) {
+  .blog-content__img, .blog .blog-wrapper .blog-content .blog-content__info {
+    width: 100%;
+  }
   #partner-slider .splide__slide, .advantages-slider .splide__slide {
     width: 85% !important;
   }
