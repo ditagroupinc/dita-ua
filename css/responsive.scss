@@ -718,6 +718,9 @@
 }
 
 @media only screen and (max-width: 680px){
+    .modal-callback .modal-callback__close {
+        width: calc(100% - 58px);
+    }
     .blog-content__img, .blog .blog-wrapper .blog-content .blog-content__info {
         width: 100%;
     }
