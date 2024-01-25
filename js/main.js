@@ -486,3 +486,6 @@ $(document).ready(function() {
 });
 
 
+/*START WOW ANIMATION JS*/
+new WOW().init();
+/*END WOW ANIMATION JS*/
